@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import { BowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+  <App />
+    {/* <BowserRouter>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="contacto" element={<Contacto />} />
+            <Route path="404" element={<Contacto />} />
+        </Routes>
+    </BowserRouter> */}
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
+import {useState} from 'react';
+import Form from './components/Form';
+import ShowCharacter from './components/character/ShowCharacter';
 import './App.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import Container from '@mui/material/Container';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
+
 
 function App() {
+
+  const [name, setName] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="sm">
+
+        <Typography variant="h2">Marvel API</Typography>
+        <Form setName={setName}/>
+
+        <IconButton color="primary" aria-label="Reset" component="label" onClick={()=>setName('')}>
+          <RestartAltIcon />
+        </IconButton>
+
+        <ShowCharacter name={name} margin="normal"/>
+
+      </Container>
+    </React.Fragment>
   );
 }
 
