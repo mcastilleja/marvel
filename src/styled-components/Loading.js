@@ -4,7 +4,7 @@ import './Style.css'
 const Loading = () => {
   return (
     <div className='loader'>
-      <img src='load.gif' alt='Loading Marvel'/>
+      <img className='loadGif' src='load.gif' alt='Loading Marvel'/>
     </div>
   )
 }

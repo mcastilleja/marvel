@@ -1,34 +1,33 @@
-import React from 'react';
-import {useState} from 'react';
-import Form from './components/Form';
-import ShowCharacter from './components/character/ShowCharacter';
-import './App.css';
-import CssBaseline from '@mui/material/CssBaseline';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import Container from '@mui/material/Container';
-import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import React from "react";
+import { useState } from "react";
+import Form from "./components/Form";
+import ShowCharacter from "./components/character/ShowCharacter";
+import "./App.css";
 
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from "@mui/material/Box";
+import Logo from "./components/Logo";
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 function App() {
-
   const [name, setName] = useState("");
 
   return (
     <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="sm">
-
-        <Typography variant="h2">Marvel API</Typography>
-        <Form setName={setName}/>
-
-        <IconButton color="primary" aria-label="Reset" component="label" onClick={()=>setName('')}>
-          <RestartAltIcon />
-        </IconButton>
-
-        <ShowCharacter name={name} margin="normal"/>
-
-      </Container>
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <Box sx={{ width: "80%", marginX: 'auto', marginBottom: 10 }}>
+          <Logo/>
+          <Form setName={setName} />
+          <ShowCharacter name={name} margin="normal" />
+        </Box>
+      </ThemeProvider>
     </React.Fragment>
   );
 }
