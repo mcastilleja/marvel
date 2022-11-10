@@ -7,15 +7,14 @@ export const useFetch = (name, type) => {
     const [loading, setLoading] = useState(false);
     
     useEffect(() => {
-        getCharacter(name);
-      }, [name]);
+        getCharacter(name, type);
+      }, [name, type]);
 
-    const getCharacter = async (name) => {
+    const getCharacter = async (name, type) => {
         const URL_API = 'https://gateway.marvel.com:443/v1/public/'
         const API_KEY = 'ts=1&apikey=caef99f540bdb86a37397ad5ff6c0c7a&hash=2aaf62f95573c4b8419e3c56b1b676c8';
 
         setLoading(true)
-        console.log("El tipo en el useFetch es", type)
 
         try {
 
