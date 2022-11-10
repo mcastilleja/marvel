@@ -1,12 +1,12 @@
 import React from "react";
 import Navs from "./Navs";
 
-const Detail = ({ selector }) => {
+const Detail = () => {
     
     return(
         <>
-        <Navs />
-        <h1>{selector}</h1>
+            <Navs />
+            <h1>Hola Mundo</h1>
         </>
     )
 }

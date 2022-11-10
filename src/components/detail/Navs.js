@@ -14,7 +14,6 @@ const Navs = () => {
 
   return (
     <>
-      
       <ToggleButtonGroup
         color="secondary"
         value={alignment}
@@ -30,20 +29,40 @@ const Navs = () => {
           textAlign: "center",
         }}
       >
-        <ToggleButton value="comics" sx={{ width: "11%" }}>
-          Comics
+      <NavLink to="/">
+        <ToggleButton value="characters" sx={{ width: "15%" }}>
+          Characters
         </ToggleButton>
-        <ToggleButton value="series" sx={{ width: "11%" }}>
-          Series
-        </ToggleButton>
-        <ToggleButton value="stories" sx={{ width: "11%" }}>
-          Stories
-        </ToggleButton>
-        <NavLink to="/">
-        <IconButton color="secondary" aria-label="to home" sx={{ marginLeft: 1 }}>
-          <CottageIcon />
-        </IconButton>
       </NavLink>
+        <NavLink to="/comics">
+          <ToggleButton value="comics" sx={{ width: "15%" }}>
+            Comics
+          </ToggleButton>
+        </NavLink>
+        <NavLink to="/series">
+          <ToggleButton value="series" sx={{ width: "15%" }}>
+            Series
+          </ToggleButton>
+        </NavLink>
+        <NavLink to="/creators">
+          <ToggleButton value="creators" sx={{ width: "15%" }}>
+            Creators
+          </ToggleButton>
+        </NavLink>
+        <NavLink to="/events">
+          <ToggleButton value="events" sx={{ width: "15%" }}>
+            Events
+          </ToggleButton>
+        </NavLink>
+        <NavLink to="/">
+          <IconButton
+            color="secondary"
+            aria-label="to home"
+            sx={{ marginLeft: 1 }}
+          >
+            <CottageIcon />
+          </IconButton>
+        </NavLink>
       </ToggleButtonGroup>
     </>
   );

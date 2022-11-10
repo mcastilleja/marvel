@@ -6,8 +6,8 @@ export const useForm = (initialState ={}) => {
     const handleChange = (e) => {
         const {name, value, checked, type} = e.target;
 
-        setInputs((old)=> ({
-            ...old,
+        setInputs((input)=> ({
+            ...input,
             [name]: type === "checkbox" ? checked: value,
         }));
         

@@ -7,7 +7,7 @@ import Stack from "@mui/material/Stack";
 import SearchIcon from "@mui/icons-material/Search";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
-const Form = ({ setName }) => {
+const Form = ({ setName, type }) => {
   const [inputs, handleChange, reset] = useForm({ name: "" });
   const { name } = inputs;
 
@@ -28,7 +28,7 @@ const Form = ({ setName }) => {
         >
           <TextField
             id="outlined-basic"
-            label="Buscar personaje"
+            label={`Search ${type}`}
             variant="outlined"
             value={name}
             onChange={handleChange}

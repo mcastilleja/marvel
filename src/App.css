@@ -3,3 +3,8 @@ img.logoMarvel {
   display: block;
   width: 300px;
 }
+
+h1 {
+  text-align: center;
+  margin: 30px auto 50px;
+}
