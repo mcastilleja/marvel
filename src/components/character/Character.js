@@ -1,5 +1,5 @@
 import React from "react";
-//import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -8,17 +8,21 @@ import { CardActionArea } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
 const Character = ({ character = "" }) => {
-  const { name, thumbnail/*, id*/} = character;
-  /*const [ number, setNumber ] = useState();
+
+  const { name, thumbnail, id} = character;
+  const [ numberId, setNumberId ] = useState(0);
 
   const handleClick = () => {
-    setNumber(id)
-    console.log(number)
-  }*/
+    setNumberId(id)
+  }
+
+  useEffect(() => {
+    console.log(numberId)
+  }, [numberId])
 
   return (
     <Grid xs={3}>
-      <Card sx={{ maxWidth: 345 }} /*onClick={ handleClick }*/>
+      <Card sx={{ maxWidth: 345 }} onClick={ handleClick }>
         <CardActionArea>
           <CardMedia
             component="img"

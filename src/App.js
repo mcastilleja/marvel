@@ -18,8 +18,6 @@ const darkTheme = createTheme({
 function App() {
   const [name, setName] = useState("");
 
-  //console.log(window.location.pathname.slice(1))
-
   return (
     <React.Fragment>
       <ThemeProvider theme={darkTheme}>
