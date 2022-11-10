@@ -1,6 +1,5 @@
 import React from "react";
 import { useForm } from "../hooks/useForm";
-import Swal from "sweetalert2";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -14,22 +13,13 @@ const Form = ({ setName }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!name.trim()) {
-      return Swal.fire({
-        title: "Error!",
-        text: "Instert a Name",
-        icon: "error",
-      });
-    }
-
     setName(name.trim().toLowerCase());
-
     reset();
   };
+
   return (
     <form onSubmit={handleSubmit}>
-      <Box sx={{ width: '50%' ,marginBottom: 5, marginX: 'auto' }}>
+      <Box sx={{ width: '50%' ,marginBottom: 3, marginX: 'auto' }}>
         <Stack
           direction="row"
           justifyContent="center"

@@ -11,13 +11,15 @@ export const useFetch = (name) => {
       }, [name]);
 
     const getCharacter = async (name) => {
+
         const API_KEY = 'ts=1&apikey=caef99f540bdb86a37397ad5ff6c0c7a&hash=2aaf62f95573c4b8419e3c56b1b676c8';
         setLoading(true)
+        
         try {
 
             let response;
             
-            if(name !== ""){
+            if( name !== "" ){
                 response = await fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}&${API_KEY}`)   
             } else {
                 response = await fetch(`https://gateway.marvel.com:443/v1/public/characters?${API_KEY}`)

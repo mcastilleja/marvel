@@ -10,6 +10,7 @@ export const useForm = (initialState ={}) => {
             ...old,
             [name]: type === "checkbox" ? checked: value,
         }));
+        
     };
 
     const reset = () =>{
