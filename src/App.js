@@ -33,9 +33,9 @@ function App() {
 
             <Routes>
               <Route path="/" element={<Views name={name} setName={setName} type="characters" />} />
-              <Route path="comics" element={<Comics name={name} setName={setName}  type="comics"/>} />
-              <Route path="series" element={<Series name={name} setName={setName}  type="series" />} />
-              <Route path="creators" element={<Creators name={name} setName={setName}  type="creators" />} />
+              <Route path="comics" element={<Comics name={name} setName={setName} type="comics"/>} />
+              <Route path="series" element={<Series name={name} setName={setName} type="series" />} />
+              <Route path="creators" element={<Creators name={name} setName={setName} type="creators" />} />
               <Route path="events" element={<Events name={name} setName={setName} type="events" />} />
             </Routes>
 
